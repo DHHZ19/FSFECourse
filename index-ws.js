@@ -29,7 +29,7 @@ wss.on("connection", function connection(ws) {
       wss.broadcast(`Current visitors: ${numClients}`);
   });
 });
-// broad
+// bay
 wss.broadcast = function broadcast(data) {
   wss.clients.forEach(function each(client) {
     client.send(data);
